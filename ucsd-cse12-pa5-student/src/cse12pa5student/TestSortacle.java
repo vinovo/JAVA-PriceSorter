@@ -15,12 +15,12 @@ public class TestSortacle {
 		}		
 	}
 
-	/*  A Haiku, by Nik:
-	 * -----------------------
-	 * This test always fails
+	/*        A Haiku 
+	 * -------------------------
+	 * This test fails at first
 	 * Should give you an idea 
 	 * how to write your tests.
-	 * -----------------------
+	 * -------------------------
 	 */
 	@Test
 	public void testGoodSort1() {
