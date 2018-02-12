@@ -41,11 +41,17 @@ public class Sortacle {
 
 	public static Counterexample isGoodSorter(PriceSorter s) {
 		int numToGenerate = 60;
-		List<Item> original = generateInput(numToGenerate);
+		List<Item> original = generateInput(0);
+		List<Item> input = new ArrayList<Item>(original);
+		s.sortByPrice(input);
+		if (!isSortedVersionOf(original, input)){
+			Counterexample ce = new Counterexample(original, input);
+			return ce;
+		}
 		while (isSortedVersionOf(original, original)) {
 			original = generateInput(numToGenerate);
 		}
-		List<Item> input = new ArrayList<Item>(original);
+		input = new ArrayList<Item>(original);
 		s.sortByPrice(input);
 		if (isSortedVersionOf(original, input))
 			return null;
@@ -64,5 +70,6 @@ public class Sortacle {
 		}
 		return count;
 	}
+	
 
 }
