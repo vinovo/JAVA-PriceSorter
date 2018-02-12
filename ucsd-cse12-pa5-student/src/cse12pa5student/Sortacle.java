@@ -8,9 +8,15 @@ public class Sortacle {
 
 	public static List<Item> generateInput(int n) {
 		List<Item> lst = new ArrayList<Item>();
-		String name = "gadget";
+		String name1 = "gadget";
+		String name2 = "toy";
+		String name;
 		Random r = new Random();
 		for (int i = 0; i < n; i++) {
+			if ((int)Math.random() * 2 % 2 == 0)
+				name = name1;
+			else
+				name = name2;
 			lst.add(new Item(name, r.nextInt(20), r.nextInt(3)));
 		}
 		return lst;
