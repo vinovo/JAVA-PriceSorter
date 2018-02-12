@@ -24,7 +24,7 @@ public class Sortacle {
 				return false;
 		}
 		for (int i = 0; i < maybeSorted.size() - 1; i++) {
-			if (maybeSorted.get(i + 1).priceInCents < maybeSorted.get(i).priceInCents)
+			if (maybeSorted.get(i).priceInCents > maybeSorted.get(i+1).priceInCents)
 				return false;
 		}
 		return true;
