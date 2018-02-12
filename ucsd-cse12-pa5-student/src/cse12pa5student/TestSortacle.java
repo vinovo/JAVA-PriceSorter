@@ -183,4 +183,20 @@ public class TestSortacle {
 	public void testIsGoodSorterForBadSorters3(){
 		assertNotNull(Sortacle.isGoodSorter(new BadSort2()));
 	}
+	
+	//Tests for WebSorter
+	@Test
+	public void testWebSorter1(){
+		assertNull(Sortacle.isGoodSorter(new WebSorter1()));
+	}
+	
+	@Test
+	public void testWebSorter2(){
+		assertNull(Sortacle.isGoodSorter(new WebSorter2()));
+	}
+	
+	@Test
+	public void testWebSorter3(){
+		assertNull(Sortacle.isGoodSorter(new WebSorter3()));
+	}
 }
