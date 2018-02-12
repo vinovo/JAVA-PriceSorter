@@ -17,8 +17,9 @@ public class Sortacle {
 			String name = "" + (char) (65 + Math.random() * 26);
 			lst.add(new Item(name, r.nextInt(1000000), r.nextInt(100000)));
 		}
-		if (lst.size() > n) {
-			for (int i = 0; i < n - lst.size(); i++) {
+		int size = lst.size();
+		if (size > n) {
+			for (int i = 0; i < (size - n); i++) {
 				lst.remove(lst.size() - 1);
 			}
 		}
@@ -70,6 +71,5 @@ public class Sortacle {
 		}
 		return count;
 	}
-	
 
 }
