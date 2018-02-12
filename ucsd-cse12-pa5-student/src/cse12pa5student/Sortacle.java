@@ -14,8 +14,7 @@ public class Sortacle {
 		lst.add(new Item("ball", 10, 10));
 		lst.add(new Item("fakeball", 15, 10));
 		for (int i = 0; i < n - 4; i++) {
-			String name = "" + (char) (65 + Math.random() * 26);// + (char)
-																// (65+Math.random()*57);
+			String name = "" + (char) (65 + Math.random() * 26);
 			lst.add(new Item(name, r.nextInt(1000000), r.nextInt(100000)));
 		}
 		if (lst.size() > n) {
