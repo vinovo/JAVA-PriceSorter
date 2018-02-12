@@ -31,7 +31,7 @@ public class Sortacle {
 	}
 
 	public static Counterexample isGoodSorter(PriceSorter s) {
-		int numToGenerate = 20;
+		int numToGenerate = 10000;
 		List<Item> original = generateInput(numToGenerate);
 		while (isSortedVersionOf(original, original)){
 			original = generateInput(numToGenerate);
