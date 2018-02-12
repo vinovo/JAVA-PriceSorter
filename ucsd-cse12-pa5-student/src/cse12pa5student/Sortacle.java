@@ -16,7 +16,7 @@ public class Sortacle {
 		for (int i = 0; i < n - 4; i++) {
 			String name = "" + (char) (65 + Math.random() * 26);// + (char)
 																// (65+Math.random()*57);
-			lst.add(new Item(name, r.nextInt(20), r.nextInt(3)));
+			lst.add(new Item(name, r.nextInt(1000000), r.nextInt(100000)));
 		}
 		if (lst.size() > n) {
 			for (int i = 0; i < n - lst.size(); i++) {
