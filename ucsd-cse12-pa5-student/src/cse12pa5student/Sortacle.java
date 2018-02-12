@@ -32,6 +32,9 @@ public class Sortacle {
 
 	public static Counterexample isGoodSorter(PriceSorter s) {
 		List<Item> original = generateInput(4);
+		while (isSortedVersionOf(original, original)){
+			original = generateInput(4);
+		}
 		List<Item> input = new ArrayList<Item>(original);
 		s.sortByPrice(input);
 		if (isSortedVersionOf(original, input))
