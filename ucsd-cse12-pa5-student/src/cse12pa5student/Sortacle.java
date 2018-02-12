@@ -11,7 +11,7 @@ public class Sortacle {
 		String name = "gadget";
 		Random r = new Random();
 		for (int i = 0; i < n; i++) {
-			lst.add(new Item(name, r.nextInt(4), r.nextInt(3)));
+			lst.add(new Item(name, r.nextInt(20), r.nextInt(3)));
 		}
 		return lst;
 	}
@@ -31,7 +31,7 @@ public class Sortacle {
 	}
 
 	public static Counterexample isGoodSorter(PriceSorter s) {
-		List<Item> original = generateInput(20);
+		List<Item> original = generateInput(4);
 		List<Item> input = new ArrayList<Item>(original);
 		s.sortByPrice(input);
 		if (isSortedVersionOf(original, input))
@@ -51,35 +51,4 @@ public class Sortacle {
 		}
 		return count;
 	}
-	
-	//for test use, delete when submit.
-/*	public void sortByPrice(List<Item> input) {
-		List<Item> lst = new ArrayList<Item>();
-		lst.add(input.get(0));
-		for (int i = 1; i < input.size(); i++) {
-			boolean added = false;
-			for (int j = lst.size() - 1; j >= 0; j--) {
-				if (input.get(i).priceInCents > lst.get(j).priceInCents && added == false) {
-					lst.add(j + 1, input.get(i));
-					added = true;
-				}
-				if (j == 0 && added == false) {
-					lst.add(0, input.get(i));
-					added = true;
-				}
-			}
-		}
-		input.clear();
-		for (int i = 0; i < lst.size(); i++){
-			input.add(lst.get(i));
-		}
-	}
-	
-	public static void main(String[] args){
-		List<Item> lst = generateInput(4);
-		System.out.println(lst);
-		Sortacle s = new Sortacle();
-		s.sortByPrice(lst);
-		System.out.println(lst);
-	}*/
 }
