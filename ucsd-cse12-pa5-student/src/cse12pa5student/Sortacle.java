@@ -10,7 +10,7 @@ public class Sortacle {
 		List<Item> lst = new ArrayList<Item>();
 		Random r = new Random();
 		for (int i = 0; i < n; i++) {
-			String name = "" + (char) r.nextInt(121) + (char) r.nextInt(121);
+			String name = "" + (char) (65+Math.random()*57);// + (char) (65+Math.random()*57);
 			lst.add(new Item(name, r.nextInt(20), r.nextInt(3)));
 		}
 		return lst;
